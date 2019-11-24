@@ -4,11 +4,11 @@ I used OpenStreetMap API to gather the polygonal bounding shapes of all colleges
 
 I then transformed the polygons into s2 cells with s2geometry by google.
 
-At this point I thought I would need s2 cells because I thought I would be using a NoSQL (DynamoDB) database with the s2 cell (level 16) as the database index, and reverse timezone as secondary index. 
+At this point I thought I would need s2 cells because I thought I would be using a NoSQL (DynamoDB) database with the s2 cell (level 16) as the database index, and reverse timestamp as secondary index. 
 
 I didn't discover this whole time that Elasticsearch provides much better geo-querying for both polygons and coordinates than what I had spent my time creating from scratch. However, now that I had polygons I might as well use them in Elasticsearch.
 
-I then formatted my data in preperation for using Elasticsearch. I converted the s2 cells back into polygons to filter any malformed polygons from the OpenStreetMap API endeavour, and added additional info to the colleges/universities like headcount, timestamp, alias, etc. and those are the datasets available in "datasets". Enjoy!
+I then formatted my data in preperation for using Elasticsearch. I converted the s2 cells back into polygons to filter any malformed polygons from the OpenStreetMap API endeavour, and added additional info to the colleges/universities like headcount, timezone, alias, etc. and those are the datasets available in "datasets". Enjoy!
 
 P.S. 
 Theres 2 different versions for the US because OpenStreetMap does not have the polygon of EVERY college/university. 
