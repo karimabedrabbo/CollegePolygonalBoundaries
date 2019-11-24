@@ -21,7 +21,7 @@ Here's a little fun work with an algorithm to get back from s2 cells to polygons
 
 ![Alt text](./Illustrations/s2BorderCampus.png "Berkeley S2 Inner Border")
 
-First we find all the "islands" of a given college or university. We generate an inner (not depicted) and outer border of s2 cells for each island, find the matching coordinate set, and then build our polygon.
+First we find all the "islands" of a given college or university. We generate an inner (not depicted) and outer border of s2 cells for each island, create a coordinate set based on the intersection of the outer and inner s2 cell borders, and then build our polygon.
 
 
 ![Alt text](./Illustrations/failedAttempt.png "Berkeley S2 level 16")
