@@ -4,7 +4,7 @@ I used OpenStreetMap API to gather the polygonal bounding shapes of all colleges
 
 I then transformed the polygons into s2 cells with s2geometry by google.
 
-At this point I thought I would need s2 cells because I thought I would be using a NoSQL (DynamoDB) database with the s2 cell (level 16) as the database index, and reverse timestamp as secondary index. 
+At this point I thought I would need s2 cells because I thought I would be using a NoSQL (DynamoDB) database with the s2 cell (level 16) as the database index, and reverse timezone as secondary index. 
 
 I didn't discover this whole time that Elasticsearch provides much better geo-querying for both polygons and coordinates than what I had spent my time creating from scratch. However, now that I had polygons I might as well use them in Elasticsearch.
 
